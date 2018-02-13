@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Auction</title>
+    <!--styles-->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="node_modules/font" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+
+    <!--js-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/pinterest-grid.js"></script>
+    <script>
+        const Auction = {};
+    </script>
+</head>
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light rounded">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <form action="" autocomplete="off" class="form-horizontal col-md-12 search" method="post"
+              accept-charset="utf-8">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn  btn-search" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </nav>
+
+</header>
+<div class="container">
+    <div class="row padding-bottom">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,auto/all?random=4" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car/all?random=3" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,automobile/all?random=2" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,automobile/all?random=1" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><div class="row padding-bottom">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,auto/all?random=44" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car/all?random=33" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,automobile/all?random=22" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://loremflickr.com/200/200/car,automobile/all?random=11" alt="Card image cap">
+                <!--<div class="card-body">-->
+                <!--<h5 class="card-title">Card title</h5>-->
+                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--</div>-->
+                <div class="card-footer ">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group col-sm-6 col-xs-6 col-lg-6" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-warning">Bid</button>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-lg-6">
+                            <div class="row"><span class="badge badge-pill badge-warning">Price:1000$</span></div>
+                            <div class="row">
+                                <small class="text-muted"><span
+                                        class="badge badge-pill badge-light">Starts 3 Days From Now</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <!--<section id="pinBoot">-->
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/sDLIAZD.png" alt="">-->
+        <!--<h4><a href="#">Title 1</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.-->
+        <!--Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id-->
+        <!--est laborum.</p>-->
+        <!--</article>-->
+        <!--<article class="white-panel"><img src="http://i.imgur.com/sDLIAZD.png" alt="">-->
+        <!--<h4><a href="#">Title 1</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.-->
+        <!--Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id-->
+        <!--est laborum.</p>-->
+        <!--</article>-->
+        <!--<article class="white-panel"><img src="http://i.imgur.com/sDLIAZD.png" alt="">-->
+        <!--<h4><a href="#">Title 1</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.-->
+        <!--Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id-->
+        <!--est laborum.</p>-->
+        <!--</article>-->
+        <!--<article class="white-panel"><img src="http://i.imgur.com/8lhFhc1.gif" alt="">-->
+        <!--<h4><a href="#">Title 2</a></h4>-->
+        <!--<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est-->
+        <!--laborum.</p>-->
+        <!--</article>-->
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/xOIMvAe.jpg" alt="">-->
+        <!--<h4><a href="#">Title 3</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
+        <!--</article>-->
+
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/3gXW3L3.jpg" alt="">-->
+        <!--<h4><a href="#">Title 4</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.-->
+        <!--Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id-->
+        <!--est laborum.</p>-->
+        <!--</article>-->
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/o2RVMqm.jpg" alt="">-->
+        <!--<h4><a href="#">Title 5</a></h4>-->
+        <!--<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla-->
+        <!--pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit-->
+        <!--anim id est laborum.</p>-->
+        <!--</article>-->
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/kFFpuKA.jpg" alt="">-->
+        <!--<h4><a href="#">Title 6</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
+        <!--</article>-->
+        <!--<article class="white-panel"><img src="http://i.imgur.com/kFFpuKA.jpg" alt="">-->
+        <!--<h4><a href="#">Title 6</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
+        <!--</article>-->
+        <!--<article class="white-panel"><img src="http://i.imgur.com/kFFpuKA.jpg" alt="">-->
+        <!--<h4><a href="#">Title 6</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
+        <!--</article>-->
+
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/E9RmLPA.jpg" alt="">-->
+        <!--<h4><a href="#">Title 7</a></h4>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore-->
+        <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--aliquip ex ea commodo consequat. Duis aute-->
+        <!--irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.-->
+        <!--Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id-->
+        <!--est laborum.</p>-->
+        <!--</article>-->
+
+        <!--<article class="white-panel"><img src="http://i.imgur.com/8lhFhc1.gif" alt="">-->
+        <!--<h4><a href="#">Title 8</a></h4>-->
+        <!--<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est-->
+        <!--laborum.</p>-->
+        <!--</article>-->
+
+        <!--</section>-->
+
+
+    </div>
+
+</div>
+
+
+<!--scripts-->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
